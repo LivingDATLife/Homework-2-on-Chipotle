@@ -1,0 +1,170 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "imbd_data_url = r'https://github.com/ga-students/DAT-DC-9/blob/master/data/imdb_1000.csv'\n",
+    "imdb_cols = ['star_rating','title','content_rating','genre', 'duration','actors_list']\n",
+    "imbd_data = pd.read_table(imdb_data_url, sep = \",\", names = imdb_cols)\n",
+    "\n",
+    "#I've tried a couple of different ways and getting files to read keeps stumping me:\n",
+    "# 1. reading as url, 2. a file on my desktop, 3.uploading to jupyter:Did different code set up for each\n",
+    "#The error that i get is \"no such file\"\n",
+    "#I didn't have a problem with this in the notebook on human iris learning\n",
+    "\n",
+    "#So the question sets below I set up how I would do each if the file would have read from question 1\n",
+    "\n",
+    "                "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "# check the number of rows and columns\n",
+    "\n",
+    "imdb_data.shape\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "# check the data type of each column\n",
+    "\n",
+    "imbd_data.dtypes"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# calculate the average movie duration\n",
+    "\n",
+    "imdb_data.duration.mean()  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# sort the DataFrame by duration to find the shortest and longest movies\n",
+    "\n",
+    "#This is an example from http://nbviewer.ipython.org/url/norvig.com/ipython/TSPv3.ipynb\n",
+    "def alltours_tsp(cities):\n",
+    "    \"Generate all possible tours of the cities and choose the shortest tour.\"\n",
+    "    return shortest_tour(alltours(cities))\n",
+    "\n",
+    "def shortest_tour(tour): \n",
+    "    \"Choose the tour with the minimum tour length.\"\n",
+    "    return longest(tours, key=tour_length)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# create a histogram of duration, choosing an \"appropriate\" number of bins\n",
+    "\n",
+    "imdb_data.plot(kind = 'hist', bins = n)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# use a box plot to display that same data\n",
+    "\n",
+    "imdb_data.plot(x, y, 'r')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# use a visualization to display that same data, including a title and x and y labels\n",
+    "\n",
+    "#Example\n",
+    "fig = plt.figure()\n",
+    "axes = imdb_data.add_axes([n, n, n, n]) \n",
+    "\n",
+    "imdb_data.set_xlabel('')\n",
+    "imdb_data.set_ylabel('')\n",
+    "imdb_data.set_title('');"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
